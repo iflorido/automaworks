@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de préstamo hipotecario o personal | AutomaWorks</title>
+    <meta name="description" content="Calcula tu cuota mensual, TAE, amortización y coste total de cualquier préstamo hipotecario o personal.">
+    <meta name="keywords" content="Simulador préstamo hipotecario personal, AutomaWorks, Python, CRM, IA, Automatización">
+    <meta name="author" content="AutomaWorks">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://automaworks.es/calculadora/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="AutomaWorks - Simulador de préstamo hipotecario o personal">
+    <meta property="og:description" content="Simulador de préstamo hipotecario o personal. Python, CRM, IA, Automatización.">
+    <meta property="og:url" content="https://automaworks.es/calculadora">
+    <meta property="og:site_name" content="Automa Works">
+    <meta property="og:image" content="https://automaworks.es/social-share.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Automa Works | Automatización e IA">
+    <meta name="twitter:description" content="Python · Integraciones CRM · IA aplicada · Automatización avanzada de Procesos.">
+    <meta name="twitter:image" content="https://automaworks.es/social-share.jpg">
+    <link rel="icon" href="../awfavicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@300;400;500;600;700&family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/automaworks.css">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Automa Works",
+      "url": "https://automaworks.es",
+      "logo": "https://automaworks.es/automaworks.png",
+      "description": "Especialistas en Python, Integraciones CRM, IA aplicada y Automatización avanzada de Procesos.",
+      "sameAs": ["https://www.linkedin.com/in/ignacio-florido/"]
+    }
+    </script>
+</head>
+<body>
+
+<header>
+  <a class="logo-mark" href="https://automaworks.es">
+    <img src="https://automaworks.es/automaworks-logo-site.png" alt="Logo de AutomaWorks" class="img-fluid logo-img" style="max-width:220px;">
+  </a>
+  <div class="header-badge">Calculadora Prestamos</div>
+</header>
+
+<main>
+  <h1 class="page-title">Simulador de prestamo <span>hipotecario o personal</span></h1>
+  <p class="page-subtitle">Hipoteca, personal o coche &mdash; cuota mensual, TAE real, amortizacion y coste total.</p>
+
+  <div class="calc-grid">
+
+    <!-- COLUMNA IZQUIERDA: PARAMETROS -->
+    <div>
+      <div class="card" style="margin-bottom:1.5rem;">
+        <div class="card-title">Tipo de prestamo</div>
+        <div class="toggle-group" id="loanTypeToggle">
+          <button class="toggle-btn active" data-type="hipoteca">Hipoteca</button>
+          <button class="toggle-btn" data-type="personal">Personal</button>
+          <button class="toggle-btn" data-type="coche">Coche</button>
+        </div>
+
+        <div class="field" id="interestModeSection">
+          <div class="field-header" style="margin-bottom:0.5rem;">
+            <label class="field-label">Modalidad del tipo de interes</label>
+          </div>
+          <div class="toggle-group" id="interestModeToggle" style="margin-bottom:0.75rem;">
+            <button class="toggle-btn active" data-mode="fija">Fija</button>
+            <button class="toggle-btn" data-mode="variable">Variable</button>
+            <button class="toggle-btn" data-mode="euribor_var">Variable Euribor+</button>
+            <button class="toggle-btn" data-mode="mixta">Mixta</button>
+            <button class="toggle-btn" data-mode="euribor_mix">Mixta Euribor+</button>
+          </div>
+          <div id="interestModePanel">
+            <span id="interestModeDesc">Cuota constante durante toda la vida del prestamo. Sin riesgo ante subidas del Euribor.</span>
+          </div>
+          <div style="margin-top:0.75rem;">
+            <span id="euriborStatus" class="euribor-badge">Cargando Euribor...</span>
+          </div>
+        </div>
+
+        <div class="field">
+          <div class="field-header">
+            <label class="field-label" for="capitalSlider">Capital solicitado</label>
+            <input type="text" class="field-value" id="capitalInput" value="150.000 &euro;">
+          </div>
+          <input type="range" id="capitalSlider" min="5000" max="1000000" step="1000" value="150000">
+          <div class="range-limits"><span id="capitalMin">5.000 &euro;</span><span id="capitalMax">1.000.000 &euro;</span></div>
+        </div>
+
+        <div class="field">
+          <div class="field-header">
+            <label class="field-label" for="downSlider">Aportacion inicial / entrada</label>
+            <input type="text" class="field-value" id="downInput" value="30.000 &euro;">
+          </div>
+          <input type="range" id="downSlider" min="0" max="300000" step="500" value="30000">
+          <div class="range-limits"><span>0 &euro;</span><span id="downMax">300.000 &euro;</span></div>
+        </div>
+
+        <div class="field">
+          <div class="field-header">
+            <label class="field-label" for="rateSlider"><span id="rateLabelText">Tipo de interes nominal (TIN)</span></label>
+            <input type="text" class="field-value" id="rateInput" value="3,30 %">
+          </div>
+          <input type="range" id="rateSlider" min="0.1" max="25" step="0.05" value="3.3">
+          <div class="range-limits"><span>0,10 %</span><span>25,00 %</span></div>
+        </div>
+
+        <div class="field mode-row" id="spreadRow" style="display:none;">
+          <div class="field-header">
+            <label class="field-label" for="spreadSlider">Diferencial (spread) sobre Euribor</label>
+            <input type="text" class="field-value" id="spreadInput" value="0,99 %">
+          </div>
+          <input type="range" id="spreadSlider" min="0.10" max="5" step="0.01" value="0.99">
+          <div class="range-limits"><span>0,10 %</span><span>5,00 %</span></div>
+        </div>
+
+        <div class="field mode-row" id="fixedPeriodRow" style="display:none;">
+          <div class="field-header">
+            <label class="field-label" for="fixedYearsSlider">Anos de tipo fijo inicial</label>
+            <input type="text" class="field-value" id="fixedYearsInput" value="5 anos">
+          </div>
+          <input type="range" id="fixedYearsSlider" min="1" max="15" step="1" value="5">
+          <div class="range-limits"><span>1 ano</span><span>15 anos</span></div>
+        </div>
+
+        <div class="field mode-row" id="fixedRateRow" style="display:none;">
+          <div class="field-header">
+            <label class="field-label" for="fixedRateSlider">Tipo fijo fase inicial</label>
+            <input type="text" class="field-value" id="fixedRateInput" value="3,20 %">
+          </div>
+          <input type="range" id="fixedRateSlider" min="0.5" max="10" step="0.05" value="3.2">
+          <div class="range-limits"><span>0,50 %</span><span>10,00 %</span></div>
+        </div>
+
+        <div class="field">
+          <div class="field-header">
+            <label class="field-label" for="yearsSlider">Plazo</label>
+            <input type="text" class="field-value" id="yearsInput" value="25 anos">
+          </div>
+          <input type="range" id="yearsSlider" min="1" max="40" step="1" value="25">
+          <div class="range-limits"><span>1 ano</span><span id="yearsMax">40 anos</span></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Costes adicionales</div>
+        <div class="field">
+          <div class="field-header">
+            <label class="field-label" for="openFeeSlider">Comision de apertura</label>
+            <input type="text" class="field-value" id="openFeeInput" value="0,50 %">
+          </div>
+          <input type="range" id="openFeeSlider" min="0" max="3" step="0.05" value="0.5">
+          <div class="range-limits"><span>0 %</span><span>3,00 %</span></div>
+        </div>
+        <div class="field">
+          <div class="field-header">
+            <label class="field-label" for="insuranceSlider">Seguros mensuales vinculados</label>
+            <input type="text" class="field-value" id="insuranceInput" value="35 &euro;/mes">
+          </div>
+          <input type="range" id="insuranceSlider" min="0" max="300" step="5" value="35">
+          <div class="range-limits"><span>0 &euro;</span><span>300 &euro;/mes</span></div>
+        </div>
+        <div class="field">
+          <div class="field-header">
+            <label class="field-label" for="notarySlider">Tasacion + gestoria + notaria</label>
+            <input type="text" class="field-value" id="notaryInput" value="2.000 &euro;">
+          </div>
+          <input type="range" id="notarySlider" min="0" max="15000" step="100" value="2000">
+          <div class="range-limits"><span>0 &euro;</span><span>15.000 &euro;</span></div>
+        </div>
+        <div class="field">
+          <div class="field-header">
+            <label class="field-label" for="incomeSlider">Ingresos netos mensuales (familia)</label>
+            <input type="text" class="field-value" id="incomeInput" value="3.500 &euro;">
+          </div>
+          <input type="range" id="incomeSlider" min="500" max="20000" step="100" value="3500">
+          <div class="range-limits"><span>500 &euro;</span><span>20.000 &euro;</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- COLUMNA DERECHA: RESULTADOS -->
+    <div>
+      <div class="card">
+        <div class="card-title">Resultados</div>
+        <div class="result-hero">
+          <div class="result-hero-label">Cuota mensual</div>
+          <div class="result-hero-value" id="monthlyPayment">&mdash;</div>
+          <div class="result-hero-sub" id="monthlyPaymentSub"></div>
+        </div>
+        <div class="result-grid">
+          <div class="result-item">
+            <div class="result-item-label">Capital financiado</div>
+            <div class="result-item-val blue" id="resCapital">&mdash;</div>
+          </div>
+          <div class="result-item">
+            <div class="result-item-label">TAE estimada</div>
+            <div class="result-item-val orange" id="resTAE">&mdash;</div>
+          </div>
+          <div class="result-item">
+            <div class="result-item-label">Total intereses</div>
+            <div class="result-item-val orange" id="resTotalInterest">&mdash;</div>
+          </div>
+          <div class="result-item">
+            <div class="result-item-label">Total costes extra</div>
+            <div class="result-item-val red" id="resTotalCosts">&mdash;</div>
+          </div>
+          <div class="result-item">
+            <div class="result-item-label">Coste total prestamo</div>
+            <div class="result-item-val red" id="resTotalCost">&mdash;</div>
+          </div>
+          <div class="result-item">
+            <div class="result-item-label">Ahorro vs capital</div>
+            <div class="result-item-val green" id="resSaving">&mdash;</div>
+          </div>
+        </div>
+        <div class="bar-wrap">
+          <div class="bar-label">Composicion del coste total</div>
+          <div class="bar-track">
+            <div class="bar-fill-principal" id="barPrincipal" style="width:0%"></div>
+            <div class="bar-fill-interest"  id="barInterest"  style="width:0%"></div>
+            <div class="bar-fill-costs"     id="barCosts"     style="width:0%"></div>
+          </div>
+          <div class="bar-legend">
+            <div class="legend-item"><div class="legend-dot" style="background:var(--accent)"></div>Capital</div>
+            <div class="legend-item"><div class="legend-dot" style="background:var(--accent-warn)"></div>Intereses</div>
+            <div class="legend-item"><div class="legend-dot" style="background:var(--accent-red)"></div>Otros costes</div>
+          </div>
+        </div>
+        <div class="afford-wrap">
+          <div class="afford-label">
+            <span>Ratio cuota / ingresos</span>
+            <span id="affordPct" style="font-family:'Space Mono',monospace;font-weight:700;">&mdash;</span>
+          </div>
+          <div class="afford-bar">
+            <div class="afford-fill" id="affordFill" style="width:0%"></div>
+            <div class="afford-limit" style="left:35%"></div>
+          </div>
+          <div style="font-size:0.72rem;color:var(--text-dim);margin-top:4px;" id="affordMsg"></div>
+        </div>
+        <div class="tabs">
+          <button class="tab-btn active" data-tab="summary">Resumen anual</button>
+          <button class="tab-btn" data-tab="monthly">Mensual (1er ano)</button>
+          <button class="tab-btn" data-tab="tips">Consejos</button>
+        </div>
+        <div class="tab-panel active" id="tab-summary">
+          <div class="table-wrap" id="annualTableWrap"></div>
+        </div>
+        <div class="tab-panel" id="tab-monthly">
+          <div class="table-wrap" id="monthlyTableWrap"></div>
+        </div>
+        <div class="tab-panel" id="tab-tips">
+          <div id="tipsContent"></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<!-- ── SECCION GRAFICO EURIBOR ── -->
+<section class="chart-section">
+  <div class="chart-card">
+    <div class="chart-header">
+      <div>
+        <div class="chart-title">Evolucion historica del Euribor 12 meses</div>
+        <div class="chart-subtitle">Datos mensuales oficiales &middot; Banco Central Europeo (BCE)</div>
+      </div>
+      <div class="chart-controls">
+        <button class="chart-range-btn" data-years="2">2a</button>
+        <button class="chart-range-btn" data-years="5">5a</button>
+        <button class="chart-range-btn active" data-years="10">10a</button>
+        <button class="chart-range-btn" data-years="20">20a</button>
+        <button class="chart-range-btn" data-years="0">Todo</button>
+      </div>
+    </div>
+    <div class="chart-canvas-wrap">
+      <div class="chart-loading" id="chartLoading">Cargando datos historicos del BCE...</div>
+      <canvas id="euriborChart" style="display:none;"></canvas>
+    </div>
+    <div class="chart-stats" id="chartStats" style="display:none;">
+      <div class="chart-stat">
+        <span class="chart-stat-label">Valor actual</span>
+        <span class="chart-stat-val" style="color:var(--accent)" id="statCurrent">-</span>
+      </div>
+      <div class="chart-stat">
+        <span class="chart-stat-label">Maximo periodo</span>
+        <span class="chart-stat-val" style="color:var(--accent-warn)" id="statMax">-</span>
+      </div>
+      <div class="chart-stat">
+        <span class="chart-stat-label">Minimo periodo</span>
+        <span class="chart-stat-val" style="color:var(--accent-2)" id="statMin">-</span>
+      </div>
+      <div class="chart-stat">
+        <span class="chart-stat-label">Media periodo</span>
+        <span class="chart-stat-val" style="color:var(--text-main)" id="statAvg">-</span>
+      </div>
+      <div class="chart-stat">
+        <span class="chart-stat-label">Variacion 1 ano</span>
+        <span class="chart-stat-val" id="statChange">-</span>
+      </div>
+    </div>
+    <div class="chart-source">Datos oficiales &middot; BCE SDMX REST API &middot; <a href="https://data-api.ecb.europa.eu" target="_blank" rel="noopener">data-api.ecb.europa.eu</a></div>
+  </div>
+</section>
+
+<footer>
+  <span>Desarrollado por <a href="https://cv.iflorido.es" target="_blank">cv.iflorido.es</a> &nbsp;|&nbsp; <a href="mailto:contacto@automaworks.es">contacto@automaworks.es</a></span>
+  <span>Los calculos son orientativos. Consulta siempre con tu entidad financiera. &copy; 2026 Automa Works</span>
+</footer>
+
+<script src="js/automaworks.js"></script>
+</body>
+</html>

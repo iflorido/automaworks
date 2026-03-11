@@ -1,0 +1,64 @@
+# Activar el motor de reescritura
+RewriteEngine On
+
+# ----------------------------------------------------------------------
+# 1. FORZAR HTTPS
+# Redirige todo el tráfico HTTP a HTTPS para mayor seguridad
+# ----------------------------------------------------------------------
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# ----------------------------------------------------------------------
+# 2. FORZAR "SIN WWW"
+# Unifica tu dominio en https://automaworks.es (mejor para SEO)
+# Si alguien entra a www.automaworks.es, lo manda a la versión corta.
+# ----------------------------------------------------------------------
+RewriteCond %{HTTP_HOST} ^www\. [NC]
+RewriteRule ^(.*)$ https://automaworks.es/$1 [L,R=301]
+
+# ----------------------------------------------------------------------
+# 3. SEGURIDAD (HEADERS)
+# Protecciones extra contra ataques comunes
+# ----------------------------------------------------------------------
+<IfModule mod_headers.c>
+    # HSTS: Le dice al navegador que siempre use HTTPS en el futuro
+    Header set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+    
+    # Previene que otros sitios incrusten tu web en un iframe (evita Clickjacking)
+    Header always append X-Frame-Options SAMEORIGIN
+    
+    # Previene ataques de tipo MIME-Sniffing
+    Header set X-Content-Type-Options nosniff
+    
+    # Protección XSS básica
+    Header set X-XSS-Protection "1; mode=block"
+</IfModule>
+
+# ----------------------------------------------------------------------
+# 4. CACHÉ DE NAVEGADOR (PERFORMANCE)
+# Hace que las imágenes y recursos carguen instantáneamente si el usuario vuelve
+# ----------------------------------------------------------------------
+<IfModule mod_expires.c>
+    ExpiresActive On
+    
+    # Imágenes: 1 año de caché
+    ExpiresByType image/jpg "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/gif "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+    
+    # Iconos: 1 año
+    ExpiresByType image/x-icon "access plus 1 year"
+    
+    # CSS y JS: 1 mes (por si actualizas estilos)
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+</IfModule>
+
+# ----------------------------------------------------------------------
+# 5. PÁGINA DE ERROR 404
+# Si alguien escribe mal la URL, le mostramos el index en lugar de un error feo
+# ----------------------------------------------------------------------
+ErrorDocument 404 /index.html

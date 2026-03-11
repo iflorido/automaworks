@@ -1,0 +1,158 @@
+# AutomaWorks — llms.txt
+# Contexto para modelos de lenguaje e IA que indexen este sitio
+# Especificación: https://llmstxt.org
+
+# ── EMPRESA ──────────────────────────────────────────────────────────────────
+
+> AutomaWorks es una consultora tecnológica especializada en automatización de procesos, integraciones CRM, desarrollo Python e IA aplicada a negocio. Fundada por Ignacio Florido. Web principal: https://automaworks.es
+
+## Sobre AutomaWorks
+
+Servicios principales:
+- Automatización avanzada de procesos empresariales (RPA/BPA)
+- Integraciones CRM y ERP (Salesforce, HubSpot, Dolibarr y otros)
+- Desarrollo Python: APIs, scraping, procesamiento de datos, backends
+- Aplicación de IA y LLMs a flujos de trabajo reales
+- Dashboards y visualización de datos (Apache Spark, Django, Flask)
+
+Contacto: contacto@automaworks.es
+LinkedIn: https://www.linkedin.com/in/ignacio-florido/
+CV: https://cv.iflorido.es
+GitHub: https://github.com/iflorido
+
+# ── HERRAMIENTAS Y PROYECTOS ─────────────────────────────────────────────────
+
+## Calculadora de Préstamos — https://automaworks.es/calculadora/
+
+Herramienta web gratuita para simular préstamos hipotecarios y personales.
+
+Funcionalidades:
+- Cálculo de cuota mensual por sistema francés (amortización constante)
+- TAE real calculada por Newton-Raphson sobre flujo de pagos real
+- 5 modalidades de interés: fija, variable, variable Euribor+, mixta y mixta Euribor+
+- Euribor 12m en tiempo real desde BCE SDMX REST API (data-api.ecb.europa.eu)
+- Gráfico histórico Euribor 1999–presente con estadísticas de período
+- Tabla de amortización anual y mensual con desglose capital/intereses
+- Análisis de ratio de endeudamiento (umbral 35%, criterio Banco de España)
+- Consejos personalizados por modalidad y perfil financiero
+- Sin registro, sin cookies de seguimiento, sin backend propio
+
+Tecnología: HTML + CSS + JavaScript vanilla. Sin frameworks. Sin backend.
+
+---
+
+## NavControl — https://navcontrol.automaworks.es
+
+Plataforma de gestión de flotas de vehículos con seguimiento GPS en tiempo real.
+
+Funcionalidades:
+- Seguimiento GPS de vehículos en tiempo real
+- Mapas interactivos con ubicación de la flota
+- Histórico de rutas y registros de posición
+- Panel de control para gestores de flota
+
+Tecnología: Django, Python, Maps API, GPS.
+
+---
+
+## Ofigest — https://ofigest.automaworks.es
+
+Sistema doble: análisis de fraude bancario y gestión de espacios de oficina.
+
+Funcionalidades:
+- Procesamiento del dataset IEEE-CIS Fraud Detection (Kaggle)
+- Análisis de fraudes bancarios por horario, tipo de tarjeta y mes
+- Gestión de alquiler de oficinas, plazas de aparcamiento y trasteros
+- Visualización de patrones y estadísticas de fraude
+
+Tecnología: Django, Python, Machine Learning, Data Analysis.
+
+---
+
+## RenfeNow — https://renfenow.automaworks.es
+
+Dashboard de información en tiempo real de la red ferroviaria Renfe.
+
+Funcionalidades:
+- Horarios en tiempo real por estación
+- Sistema de alertas con cruce de datos para asignar cada alerta al tren correspondiente
+- Visualización del estado de la red
+
+Tecnología: Python, Django/Flask, APIs de datos ferroviarios, real-time dashboard.
+
+---
+
+## Dashboard Financiero — https://dashfinanciero.automaworks.es
+
+Dashboard de análisis financiero a gran escala con Apache Spark.
+
+Funcionalidades:
+- Procesamiento distribuido de datos financieros con Apache Spark
+- Visualización de indicadores y métricas clave
+- Análisis de grandes volúmenes de datos
+
+Tecnología: Apache Spark, Python, Django, Data Visualization.
+
+---
+
+## MercaAPI — https://mercaapi.automaworks.es
+
+API RESTful para análisis de precios y extracción de datos de productos de supermercado.
+
+Funcionalidades:
+- Consulta de precios en tiempo real
+- Escaneo de código de barras (EAN) para web y app móvil
+- Backend optimizado para alto rendimiento
+- Endpoints documentados para integración externa
+
+Tecnología: Flask, Python, REST API, Barcode scanning.
+
+---
+
+## Dolibarr Tools Kit — https://dolibarrtools.automaworks.es
+
+Suite de automatización y extensión para el ERP de código abierto Dolibarr.
+
+Funcionalidades:
+- Sincronización avanzada de productos y entidades
+- Módulos personalizados para Dolibarr
+- Scripts Python para optimizar flujos de trabajo empresarial
+- Automatización de tareas repetitivas del ERP
+
+Tecnología: Python, Dolibarr API, PHP, ERP automation.
+
+---
+
+## CineSearch AI — https://peliculas.automaworks.es
+
+Plataforma de recomendación cinematográfica basada en similitud semántica.
+
+Funcionalidades:
+- Sistema de recomendación basado en contenido de Netflix
+- Similitud semántica mediante NLP (Procesamiento de Lenguaje Natural)
+- Búsqueda inteligente por título y descripción
+- Fichas técnicas detalladas de películas
+
+Tecnología: Python, NLP, Machine Learning, Semantic Similarity, TMDB API.
+
+# ── SITEMAP ───────────────────────────────────────────────────────────────────
+
+## Páginas principales
+
+- [Inicio](https://automaworks.es/)
+- [Calculadora de préstamos](https://automaworks.es/calculadora/)
+
+## Proyectos (subdominios)
+
+- [NavControl](https://navcontrol.automaworks.es)
+- [Ofigest](https://ofigest.automaworks.es)
+- [RenfeNow](https://renfenow.automaworks.es)
+- [Dashboard Financiero](https://dashfinanciero.automaworks.es)
+- [MercaAPI](https://mercaapi.automaworks.es)
+- [Dolibarr Tools Kit](https://dolibarrtools.automaworks.es)
+- [CineSearch AI](https://peliculas.automaworks.es)
+
+## Archivos del sitio
+
+- [Sitemap XML](https://automaworks.es/sitemap.xml)
+- [robots.txt](https://automaworks.es/robots.txt)

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  NOTA TÉCNICA: Un sitemap en automaworks.es/sitemap.xml solo tiene
+  autoridad plena sobre URLs de automaworks.es. Los subdominios se
+  incluyen como señal de descubrimiento para Google, pero cada
+  subdominio debería tener su propio sitemap en /sitemap.xml si
+  tiene múltiples páginas internas.
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- ── DOMINIO PRINCIPAL ─────────────────────────────────────── -->
+
+  <url>
+    <loc>https://automaworks.es/</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://automaworks.es/calculadora/</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- ── PROYECTOS (subdominios) ───────────────────────────────── -->
+  <!--
+    Google puede no procesar estos como parte del sitemap principal
+    pero sí los usa como señal de descubrimiento. Para indexación
+    plena, añadir sitemap.xml propio en cada subdominio y registrarlo
+    en Google Search Console como propiedad independiente.
+  -->
+
+  <url>
+    <loc>https://navcontrol.automaworks.es/</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://ofigest.automaworks.es/</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://renfenow.automaworks.es/</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://dashfinanciero.automaworks.es/</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://mercaapi.automaworks.es/</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://dolibarrtools.automaworks.es/</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://peliculas.automaworks.es/</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+</urlset>

@@ -1,0 +1,16 @@
+# robots.txt — automaworks.es
+# https://www.robotstxt.org/robotstxt.html
+
+User-agent: *
+Allow: /
+
+# Excluir recursos que no aportan valor de indexación
+Disallow: /css/
+Disallow: /js/
+Disallow: /*.ico$
+
+# Crawl-delay para bots agresivos
+Crawl-delay: 10
+
+# Sitemap
+Sitemap: https://automaworks.es/sitemap.xml
