@@ -71,8 +71,8 @@ $queries = [
        END AS oferta_recomendada
 FROM Cuentas c
 JOIN Clientes cl ON c.id_cliente = cl.id_cliente
-WHERE c.activa = 1
-LIMIT 20",
+WHERE c.activa = 1 
+LIMIT 25",
         'explicacion' => '<strong>CASE WHEN</strong> evalúa condiciones de arriba a abajo y devuelve el primer resultado verdadero, como un <em>if/else if</em>. El orden importa: si pusieras primero <code>saldo &gt; 10000</code>, los clientes con 60.000 € recibirían "Tarjeta Oro" en lugar de "Premium".',
     ],
 
@@ -589,7 +589,7 @@ pre.sql-code .cmt { color: #475569; font-style: italic; }
 <main class="main">
     <div class="page-header">
         <h1>SQL Práctica <span>Bancaria</span></h1>
-        <p>Base de datos: <strong>admin_unicaja</strong> · <?= count($queries) ?> consultas de entrevista con resultado en tiempo real</p>
+        <p>Base de datos: <strong>BD scalian demo</strong> · <?= count($queries) ?> consultas de entrevista con resultado en tiempo real</p>
         <div class="header-tags">
             <?php foreach ($bloques as $b): ?>
             <span class="tag"><?= htmlspecialchars($b) ?></span>
@@ -661,7 +661,7 @@ pre.sql-code .cmt { color: #475569; font-style: italic; }
 
     <div class="footer">
         <span>SQL Práctica Bancaria · <?= date('Y') ?></span>
-        <span>admin_unicaja · <?= array_sum(array_column($results, 'count')) ?> filas devueltas en total</span>
+        <span>BD scalian demo · <?= array_sum(array_column($results, 'count')) ?> filas devueltas en total</span>
     </div>
 </main>
 
