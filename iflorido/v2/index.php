@@ -34,7 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['_form'])) {
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ignacio Florido — Desarrollador Backend Python · Integraciones · Infraestructura</title>
+  <title>Ignacio Florido — Desarrollador Backend Python · Desarrollo Web · Automatización</title>
   <meta name="description" content="Portfolio profesional de Ignacio Florido. Desarrollo backend con Python, Django y FastAPI, integraciones, automatización, Docker, VPS, Linux y producto web.">
   <meta name="robots" content="index,follow">
   <meta name="author" content="Ignacio Florido">
@@ -239,7 +239,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['_form'])) {
           <p class="section__subtitle">Proyectos propios en producción que demuestran capacidad de construir soluciones completas.</p>
         </div>
 
-        <div class="grid grid--2 mt-lg">
+        <div class="grid grid--3 mt-lg">
                     <!-- MapGasolina -->
           <article class="project reveal" data-delay="0">
             <div class="project__img-wrap">
@@ -341,6 +341,53 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['_form'])) {
         <div class="card card--highlight mt-lg reveal">
           <p><strong>También fuera de Python:</strong> amplia experiencia en WordPress, WooCommerce, PrestaShop, webs corporativas, e-commerce y mantenimiento técnico. Entiendo el ciclo completo de una solución digital — desde la arquitectura hasta la producción y el soporte.</p>
         </div>
+        <!-- Trabajos web y e-commerce -->
+        <div class="projects-extra mt-lg reveal">
+          <h3 class="projects-extra__title">Selección de trabajos web y e-commerce</h3>
+          <div class="grid grid--4">
+            <a href="https://www.nomadassurf.com/" class="mini-project" target="_blank" rel="noopener">
+              <span class="mini-project__tag">PrestaShop</span>
+              <span class="mini-project__name">Nómadas Surf</span>
+              <span class="mini-project__desc">Tienda online para distribuidora de surf a nivel nacional</span>
+            </a>
+            <a href="https://www.amagidesarrollos.com/" class="mini-project" target="_blank" rel="noopener">
+              <span class="mini-project__tag">WordPress · Elementor</span>
+              <span class="mini-project__name">AMAGI Desarrollos</span>
+              <span class="mini-project__desc">Web corporativa para promotora inmobiliaria</span>
+            </a>
+            <a href="http://vivero.ceeicadiz.com/" class="mini-project" target="_blank" rel="noopener">
+              <span class="mini-project__tag">PHP · MySQL · A medida</span>
+              <span class="mini-project__name">Vivero CEEI Cádiz</span>
+              <span class="mini-project__desc">Gestión de oficinas con planos interactivos de ocupación</span>
+            </a>
+            <a href="https://catemo.es" class="mini-project" target="_blank" rel="noopener">
+              <span class="mini-project__tag">WordPress · Kit Digital</span>
+              <span class="mini-project__name">Catemo</span>
+              <span class="mini-project__desc">Web corporativa con justificación Kit Digital</span>
+            </a>
+            <a href="https://www.adhararesearch.com" class="mini-project" target="_blank" rel="noopener">
+              <span class="mini-project__tag">WordPress</span>
+              <span class="mini-project__name">Adhara Research</span>
+              <span class="mini-project__desc">Web para agencia de investigación de mercados</span>
+            </a>
+            <a href="https://www.bodente.com/" class="mini-project" target="_blank" rel="noopener">
+              <span class="mini-project__tag">WordPress</span>
+              <span class="mini-project__name">Bodente Madrid</span>
+              <span class="mini-project__desc">Web para restaurante con reservas y carta</span>
+            </a>
+            <a href="http://mariabarrerasuelopelvico.com" class="mini-project" target="_blank" rel="noopener">
+              <span class="mini-project__tag">WordPress · Kit Digital</span>
+              <span class="mini-project__name">María Barrera Fisio</span>
+              <span class="mini-project__desc">Web profesional para clínica de fisioterapia</span>
+            </a>
+            <a href="https://www.thewavedistrict.com/" class="mini-project" target="_blank" rel="noopener">
+              <span class="mini-project__tag">WordPress · WooCommerce</span>
+              <span class="mini-project__name">The Wave District</span>
+              <span class="mini-project__desc">Tienda online de material deportivo</span>
+            </a>
+          </div>
+        </div>
+         <!-- Trabajos web y e-commerce -->
       </div>
     </section>
 
@@ -562,7 +609,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['_form'])) {
     <div class="container footer__inner">
       <div>
         <strong>Ignacio Florido</strong><br>
-        <span class="footer__role">Desarrollador Backend Python · Integraciones · Infraestructura</span>
+        <span class="footer__role">Ignacio Florido — Desarrollador Backend Python · Desarrollo Web · Automatización</span>
       </div>
       <div class="footer__right">
         <span class="footer__copy">© <?= date('Y') ?></span>
