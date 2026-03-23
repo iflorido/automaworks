@@ -40,6 +40,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['_form'])) {
   <meta name="author" content="Ignacio Florido">
   <meta name="theme-color" content="#0a0f1a">
   <link rel="canonical" href="https://cv.iflorido.es/">
+  <link rel="icon" href="/assets/favicon-32.ico" type="image/x-icon">
   <link rel="icon" href="/assets/favicon-32.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
   <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192.png">
@@ -49,16 +50,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['_form'])) {
   <meta property="og:type" content="website">
   <meta property="og:locale" content="es_ES">
   <meta property="og:url" content="https://cv.iflorido.es/">
-  <meta property="og:title" content="Ignacio Florido — Desarrollador Backend Python · Integraciones · Infraestructura">
+  <meta property="og:title" content="Desarrollador Backend Python · Desarrollo Web · Automatización">
   <meta property="og:description" content="+20 años construyendo soluciones digitales. Backend Python, automatización, integraciones, Docker y despliegue en producción.">
   <meta property="og:image" content="assets/og-ignacio-florido.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Ignacio Florido — Backend Python · Integraciones · Infraestructura">
-  <meta name="twitter:description" content="+20 años construyendo soluciones digitales. Backend Python, automatización, integraciones y despliegue.">
-  <meta name="twitter:image" content="assets/og-ignacio-florido.jpg">
+  <meta name="twitter:title" content="Desarrollador Backend Python · Desarrollo Web · Automatización">
+  <meta name="twitter:description" content="+20 años construyendo soluciones digitales. Backend Python, Desarrollo Web, Automatización, integraciones y despliegue.">
+  <meta name="twitter:image" content="/assets/og-ignacio-florido.jpg">
+
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
