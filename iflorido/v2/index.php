@@ -43,6 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['_form'])) {
 
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
   <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192.png">
+  
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 
   <meta property="og:type" content="website">
