@@ -240,6 +240,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['_form'])) {
         </div>
 
         <div class="grid grid--2 mt-lg">
+                    <!-- MapGasolina -->
+          <article class="project reveal" data-delay="0">
+            <div class="project__img-wrap">
+              <img class="project__img" src="assets/proyectos/mapagasolina.jpg" alt="MapaGasolina – Plataforma de visualización de precios de gasolina" loading="lazy">
+            </div>
+            <div class="project__body">
+              <div class="project__meta">2026 · FasAPI · SQL · JavaScript</div>
+              <h3 class="project__title">MapaGasolina</h3>
+              <p class="project__desc">Plataforma para visualización de precios de gasolina en tiempo real. Proyecto orientado a operaciones con estructura modular y producto web real.</p>
+              <a class="btn btn--ghost btn--sm" href="https://mapagasolina.com/" target="_blank" rel="noopener">Ver proyecto →</a>
+            </div>
+          </article>
           <!-- OfiGest -->
           <article class="project reveal" data-delay="0">
             <div class="project__img-wrap">
@@ -280,6 +292,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['_form'])) {
           </article>
 
           <!-- Dolibarr Tools -->
+          <article class="project reveal" data-delay="1">
+            <div class="project__img-wrap">
+              <img class="project__img" src="assets/proyectos/calculadora.jpg" alt="Calculadora de préstamos hipotecarios" loading="lazy">
+            </div>
+            <div class="project__body">
+              <div class="project__meta">2026 · HTML JavaScript · Automatización</div>
+              <h3 class="project__title">Calculadora de préstamos hipotecarios</h3>
+              <p class="project__desc"> Calculadora para estimar cuotas y costes de préstamos hipotecarios.</p>
+              <a class="btn btn--ghost btn--sm" href="https://automaworks.es/calculadora/" target="_blank" rel="noopener">Ver proyecto →</a>
+            </div>
+          </article>
           <article class="project reveal" data-delay="1">
             <div class="project__img-wrap">
               <img class="project__img" src="assets/proyectos/dolibarrtools.jpg" alt="Dolibarr Tools – Suite de automatización ERP" loading="lazy">
