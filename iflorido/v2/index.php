@@ -83,6 +83,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['_form'])) {
     ]
   }
   </script>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FFCQ24M09Z"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-FFCQ24M09Z');
+</script>
 </head>
 <body>
 
