@@ -1,0 +1,549 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ignacio Florido | Desarrollador Backend Python y Product Builder</title>
+  <meta name="description" content="Portfolio profesional de Ignacio Florido. Desarrollador Backend Python con experiencia en Django, FastAPI, automatización, integraciones, producto web y despliegues en producción.">
+  <meta name="robots" content="index,follow">
+  <meta name="author" content="Ignacio Florido">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Ignacio Florido | Desarrollador Backend Python y Product Builder">
+  <meta property="og:description" content="Desarrollo backend con Python, integraciones, automatización y producto web con visión de negocio.">
+  <meta property="og:url" content="https://cv.iflorido.es/">
+  <meta property="og:locale" content="es_ES">
+  <link rel="canonical" href="https://cv.iflorido.es/">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <style>
+    :root {
+      --bg: #0b1220;
+      --bg-soft: #111a2b;
+      --panel: rgba(255,255,255,0.04);
+      --panel-strong: rgba(255,255,255,0.06);
+      --border: rgba(255,255,255,0.10);
+      --text: #e8eef9;
+      --muted: #9fb0cb;
+      --accent: #58c4dc;
+      --accent-2: #8ae1f0;
+      --shadow: 0 20px 60px rgba(0,0,0,.28);
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      background:
+        radial-gradient(circle at top right, rgba(88,196,220,.12), transparent 28%),
+        radial-gradient(circle at top left, rgba(99,102,241,.10), transparent 22%),
+        var(--bg);
+      color: var(--text);
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.65;
+    }
+
+    a { text-decoration: none; }
+    .text-muted-custom { color: var(--muted); }
+    .section-eyebrow {
+      text-transform: uppercase;
+      letter-spacing: .18em;
+      font-size: .78rem;
+      color: var(--accent-2);
+      font-weight: 700;
+    }
+    .section-title {
+      font-size: clamp(2rem, 4vw, 3.25rem);
+      line-height: 1.1;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    .glass-card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 1.5rem;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(8px);
+    }
+    .glass-card-strong {
+      background: var(--panel-strong);
+      border: 1px solid var(--border);
+      border-radius: 1.5rem;
+      box-shadow: var(--shadow);
+    }
+    .hero-title {
+      font-size: clamp(2.7rem, 6vw, 5.5rem);
+      line-height: 1.02;
+      font-weight: 800;
+      letter-spacing: -.03em;
+    }
+    .hero-lead {
+      font-size: 1.1rem;
+      color: var(--muted);
+      max-width: 52rem;
+    }
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      padding: .7rem 1rem;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: rgba(255,255,255,.03);
+      color: var(--text);
+      font-size: .95rem;
+    }
+    .navbar-custom {
+      background: rgba(11,18,32,.80);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255,255,255,.06);
+    }
+    .navbar-brand strong { letter-spacing: -.02em; }
+    .btn-accent {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #041018;
+      font-weight: 700;
+      border-radius: 999px;
+      padding: .85rem 1.25rem;
+    }
+    .btn-accent:hover {
+      background: var(--accent-2);
+      border-color: var(--accent-2);
+      color: #041018;
+    }
+    .btn-ghost {
+      border-radius: 999px;
+      padding: .85rem 1.25rem;
+      border: 1px solid var(--border);
+      color: var(--text);
+      background: transparent;
+    }
+    .btn-ghost:hover {
+      background: rgba(255,255,255,.05);
+      color: var(--text);
+      border-color: rgba(255,255,255,.16);
+    }
+    .metric-number {
+      font-size: 2.2rem;
+      font-weight: 800;
+      line-height: 1;
+    }
+    .project-card {
+      height: 100%;
+      transition: transform .22s ease, border-color .22s ease, background .22s ease;
+    }
+    .project-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(88,196,220,.35);
+      background: rgba(255,255,255,.06);
+    }
+    .timeline-item { position: relative; padding-left: 1.5rem; }
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: .55rem;
+      width: .7rem;
+      height: .7rem;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 0 .3rem rgba(88,196,220,.12);
+    }
+    .timeline-item::after {
+      content: "";
+      position: absolute;
+      left: .31rem;
+      top: 1.35rem;
+      bottom: -1.4rem;
+      width: 1px;
+      background: rgba(255,255,255,.10);
+    }
+    .timeline-item:last-child::after { display: none; }
+    .contact-panel {
+      background: linear-gradient(135deg, rgba(88,196,220,.10), rgba(99,102,241,.10));
+      border: 1px solid rgba(88,196,220,.18);
+      border-radius: 2rem;
+      box-shadow: var(--shadow);
+    }
+    .small-label {
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      font-size: .78rem;
+      font-weight: 700;
+    }
+    footer { border-top: 1px solid rgba(255,255,255,.06); }
+    .anchor-offset { scroll-margin-top: 90px; }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Ignacio Florido",
+    "url": "https://cv.iflorido.es/",
+    "jobTitle": "Desarrollador Backend Python y Product Builder",
+    "sameAs": [
+      "https://www.linkedin.com/in/ignacio-florido/",
+      "https://github.com/iflorido"
+    ],
+    "email": "mailto:iflorido@gmail.com"
+  }
+  </script>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-custom sticky-top">
+    <div class="container py-2">
+      <a class="navbar-brand" href="#top">
+        <strong>Ignacio Florido</strong><br>
+        <small class="text-muted-custom">Backend Python · Integraciones · Producto Web</small>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Abrir navegación">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto me-lg-3 mb-3 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="#valor">Valor</a></li>
+          <li class="nav-item"><a class="nav-link" href="#proyectos">Proyectos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#trayectoria">Trayectoria</a></li>
+          <li class="nav-item"><a class="nav-link" href="#stack">Stack</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+        </ul>
+        <div class="d-flex gap-2">
+          <a class="btn btn-ghost" href="https://www.linkedin.com/in/ignacio-florido/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn btn-accent" href="mailto:iflorido@gmail.com">Contactar</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <header id="top" class="py-5 py-lg-6">
+    <div class="container py-5">
+      <div class="row g-5 align-items-center">
+        <div class="col-lg-8">
+          <div class="section-eyebrow mb-3">Perfil senior con especialización técnica</div>
+          <h1 class="hero-title mb-4">Desarrollador Backend Python y Product Builder con visión real de negocio.</h1>
+          <p class="hero-lead mb-4">
+            Más de 20 años construyendo soluciones digitales. Hoy enfocado en backend con <strong>Python</strong>,
+            <strong>Django</strong>, <strong>FastAPI</strong>, automatización, integraciones y despliegue en producción,
+            sin perder la capacidad de convertir necesidades reales en producto web funcional.
+          </p>
+          <div class="d-flex flex-wrap gap-3 mb-4">
+            <a href="#proyectos" class="btn btn-accent">Ver proyectos destacados</a>
+            <a href="https://cv.iflorido.es/wp-content/uploads/2026/02/Ignacio_Florido_cv_desarrollo_Febrero13_L.pdf" class="btn btn-ghost" target="_blank" rel="noopener">Descargar CV PDF</a>
+          </div>
+          <div class="d-flex flex-wrap gap-2 mt-4" aria-label="Especialidades principales">
+            <span class="tag">Python</span>
+            <span class="tag">Django</span>
+            <span class="tag">FastAPI</span>
+            <span class="tag">APIs REST</span>
+            <span class="tag">Automatización</span>
+            <span class="tag">PostgreSQL</span>
+            <span class="tag">Docker</span>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="glass-card p-4 p-lg-5">
+            <div class="small-label mb-2">Posicionamiento recomendado</div>
+            <h2 class="h3 mb-3">Senior web builder → backend Python orientado a producto</h2>
+            <p class="text-muted-custom mb-4">
+              Un perfil poco común: experiencia senior en ejecución digital, visión full-stack, automatización,
+              producto, despliegue y contacto real con negocio.
+            </p>
+            <div class="row g-3">
+              <div class="col-6">
+                <div class="glass-card-strong p-3 h-100">
+                  <div class="metric-number">20+</div>
+                  <div class="text-muted-custom small">años en proyectos digitales</div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="glass-card-strong p-3 h-100">
+                  <div class="metric-number">4</div>
+                  <div class="text-muted-custom small">proyectos Python destacados</div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="glass-card-strong p-3">
+                  <div class="small-label mb-2">Enfoque actual</div>
+                  <div>Backend, integraciones, automatización, SaaS y herramientas internas.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="valor" class="anchor-offset py-5">
+      <div class="container py-4">
+        <div class="row mb-4">
+          <div class="col-lg-8">
+            <div class="section-eyebrow">Valor diferencial</div>
+            <h2 class="section-title">Qué aporto a un equipo técnico</h2>
+          </div>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <article class="glass-card p-4 h-100">
+              <h3 class="h4 mb-3">Backend Python con aplicación real</h3>
+              <p class="text-muted-custom mb-0">
+                Desarrollo aplicaciones con Django, FastAPI y Flask integrando bases de datos, APIs, lógica de negocio y despliegue en entornos reales.
+              </p>
+            </article>
+          </div>
+          <div class="col-md-4">
+            <article class="glass-card p-4 h-100">
+              <h3 class="h4 mb-3">Visión full-stack + negocio</h3>
+              <p class="text-muted-custom mb-0">
+                Entiendo producto, UX, operación, e-commerce, ERP/CRM y contexto cliente. No solo programo: priorizo, estructuro y entrego soluciones útiles.
+              </p>
+            </article>
+          </div>
+          <div class="col-md-4">
+            <article class="glass-card p-4 h-100">
+              <h3 class="h4 mb-3">Autonomía técnica senior</h3>
+              <p class="text-muted-custom mb-0">
+                Amplia trayectoria ejecutando proyectos de principio a fin. Capacidad para moverme entre desarrollo, hosting, automatización e integración.
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="proyectos" class="anchor-offset py-5">
+      <div class="container py-4">
+        <div class="row align-items-end mb-4">
+          <div class="col-lg-8">
+            <div class="section-eyebrow">Portfolio seleccionado</div>
+            <h2 class="section-title">Proyectos que mejor representan mi perfil actual</h2>
+            <p class="text-muted-custom mb-0">
+              He priorizado los proyectos que refuerzan una imagen más senior, técnica y orientada a producto.
+            </p>
+          </div>
+        </div>
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <article class="glass-card p-4 project-card">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="small-label">2026</span>
+                <span class="text-muted-custom small">Django · PostgreSQL · JavaScript</span>
+              </div>
+              <h3 class="h3">OfiGest</h3>
+              <p class="text-muted-custom">
+                Plataforma para la gestión del alquiler de oficinas, plazas y otros espacios. Proyecto enfocado a operaciones, estructura modular y producto web real.
+              </p>
+              <a class="btn btn-ghost" href="https://ofigest.automaworks.es/" target="_blank" rel="noopener">Ver proyecto</a>
+            </article>
+          </div>
+          <div class="col-lg-6">
+            <article class="glass-card p-4 project-card">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="small-label">2026</span>
+                <span class="text-muted-custom small">Python · PostGIS · Flutter</span>
+              </div>
+              <h3 class="h3">NavControl</h3>
+              <p class="text-muted-custom">
+                Sistema para localización de flotas, avisos y visualización operativa en tiempo real. Backend y app móvil conectados a una necesidad de negocio concreta.
+              </p>
+              <a class="btn btn-ghost" href="https://navcontrol.automaworks.es/" target="_blank" rel="noopener">Ver proyecto</a>
+            </article>
+          </div>
+          <div class="col-lg-6">
+            <article class="glass-card p-4 project-card">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="small-label">2026</span>
+                <span class="text-muted-custom small">FastAPI · APIs · Docker</span>
+              </div>
+              <h3 class="h3">MercaAPI</h3>
+              <p class="text-muted-custom">
+                Backend en Python para consumo de API en tiempo real, preparado para web y app móvil, con despliegue automatizado mediante GitHub Actions, Docker y Watchtower.
+              </p>
+              <a class="btn btn-ghost" href="https://mercaapi.automaworks.es/" target="_blank" rel="noopener">Ver proyecto</a>
+            </article>
+          </div>
+          <div class="col-lg-6">
+            <article class="glass-card p-4 project-card">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="small-label">2026</span>
+                <span class="text-muted-custom small">Flask · Python · ERP</span>
+              </div>
+              <h3 class="h3">Dolibarr Tools</h3>
+              <p class="text-muted-custom">
+                Suite de automatización para ERP: sincronización avanzada, scripts a medida, módulos y procesos que optimizan flujos de trabajo empresariales.
+              </p>
+              <a class="btn btn-ghost" href="https://dolibarrtools.automaworks.es/" target="_blank" rel="noopener">Ver proyecto</a>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="trayectoria" class="anchor-offset py-5">
+      <div class="container py-4">
+        <div class="row g-5">
+          <div class="col-lg-4">
+            <div class="section-eyebrow">Trayectoria profesional</div>
+            <h2 class="section-title">Una evolución coherente hacia backend, integración y producto</h2>
+            <p class="text-muted-custom">
+              Mi carrera no es una suma de trabajos aislados. Es una progresión desde diseño y desarrollo web hacia una especialización práctica en Python, automatización y construcción de soluciones completas.
+            </p>
+          </div>
+          <div class="col-lg-8">
+            <div class="d-flex flex-column gap-4">
+              <article class="glass-card p-4 timeline-item">
+                <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-start gap-2 mb-2">
+                  <h3 class="h4 mb-0">Servicebox SL</h3>
+                  <span class="text-muted-custom">2022 — Actualidad</span>
+                </div>
+                <div class="small-label mb-2">Desarrollo web y proyectos digitales</div>
+                <p class="text-muted-custom mb-0">
+                  Desarrollo de webs corporativas, e-commerce y proyectos para clientes, combinando ejecución, mantenimiento, entregas y necesidades reales de negocio.
+                </p>
+              </article>
+              <article class="glass-card p-4 timeline-item">
+                <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-start gap-2 mb-2">
+                  <h3 class="h4 mb-0">Autónomo</h3>
+                  <span class="text-muted-custom">2004 — 2022</span>
+                </div>
+                <div class="small-label mb-2">Diseño, desarrollo y producción digital</div>
+                <p class="text-muted-custom mb-0">
+                  Proyectos de diseño gráfico, desarrollo web, fotografía y vídeo para múltiples sectores. Etapa clave para construir autonomía, criterio y capacidad de ejecución integral.
+                </p>
+              </article>
+              <article class="glass-card p-4 timeline-item">
+                <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-start gap-2 mb-2">
+                  <h3 class="h4 mb-0">CEEI Bahía de Cádiz</h3>
+                  <span class="text-muted-custom">2010 — 2021</span>
+                </div>
+                <div class="small-label mb-2">Diseño, desarrollo y sistemas</div>
+                <p class="text-muted-custom mb-0">
+                  Desarrollo backend y frontend, identidades de proyectos y administración técnica de entornos web, con una visión transversal entre negocio y tecnología.
+                </p>
+              </article>
+              <article class="glass-card p-4 timeline-item">
+                <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-start gap-2 mb-2">
+                  <h3 class="h4 mb-0">SmartMedia Factory Finlandia</h3>
+                  <span class="text-muted-custom">2008 — 2010</span>
+                </div>
+                <div class="small-label mb-2">Desarrollo multimedia para TV</div>
+                <p class="text-muted-custom mb-0">
+                  Desarrollo de aplicaciones para televisión, participación de usuarios y maquetación/programación de sitios web y CMS.
+                </p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="stack" class="anchor-offset py-5">
+      <div class="container py-4">
+        <div class="section-eyebrow">Stack y capacidades</div>
+        <h2 class="section-title">Tecnologías con las que construyo hoy</h2>
+        <div class="glass-card p-4 p-lg-5">
+          <div class="row g-4">
+            <div class="col-md-6 col-lg-3">
+              <h3 class="h5">Backend</h3>
+              <p class="text-muted-custom mb-0">Python, Django, FastAPI, Flask, APIs REST, lógica de negocio, automatización.</p>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <h3 class="h5">Datos e infraestructura</h3>
+              <p class="text-muted-custom mb-0">PostgreSQL, MySQL, SQLite, Docker, Nginx, despliegues en VPS, GitHub Actions.</p>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <h3 class="h5">Ecosistema web</h3>
+              <p class="text-muted-custom mb-0">HTML, CSS, JavaScript, Bootstrap, WordPress, WooCommerce, PrestaShop.</p>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <h3 class="h5">Negocio y producto</h3>
+              <p class="text-muted-custom mb-0">Dolibarr, e-commerce, SEO on-page, experiencia cliente, gestión de proyectos y visión operativa.</p>
+            </div>
+          </div>
+          <hr class="my-4 border-secondary-subtle">
+          <div class="d-flex flex-wrap gap-2">
+            <span class="tag">Python</span>
+            <span class="tag">Django</span>
+            <span class="tag">FastAPI</span>
+            <span class="tag">Flask</span>
+            <span class="tag">PostgreSQL</span>
+            <span class="tag">MySQL</span>
+            <span class="tag">Docker</span>
+            <span class="tag">GitHub Actions</span>
+            <span class="tag">Pandas</span>
+            <span class="tag">PySpark</span>
+            <span class="tag">WordPress</span>
+            <span class="tag">PrestaShop</span>
+            <span class="tag">Dolibarr</span>
+            <span class="tag">Bootstrap</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="formacion" class="anchor-offset py-5">
+      <div class="container py-4">
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <article class="glass-card p-4 h-100">
+              <div class="section-eyebrow mb-2">Formación destacada</div>
+              <h2 class="h3">Máster Avanzado en Programación en Python</h2>
+              <p class="text-muted-custom mb-3">Escuela Internacional Posgrado · 2022 — 2024</p>
+              <p class="mb-3">
+                Formación en Python, Django, Flask, APIs REST, PostgreSQL, Docker, Big Data, PySpark, Dask, Machine Learning, Deep Learning y desarrollo seguro.
+              </p>
+              <p class="mb-0"><strong>Clasificación:</strong> 9.5</p>
+            </article>
+          </div>
+          <div class="col-lg-6">
+            <article class="glass-card p-4 h-100">
+              <div class="section-eyebrow mb-2">Perfil complementario</div>
+              <h2 class="h3">Base creativa y experiencia visual</h2>
+              <p class="text-muted-custom mb-3">Artes visuales, diseño y producción digital</p>
+              <p class="mb-0">
+                Mi base en diseño y producción visual me permite comunicar mejor, construir interfaces con criterio y entender el producto más allá del código.
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto" class="anchor-offset py-5">
+      <div class="container py-4">
+        <div class="contact-panel p-4 p-lg-5">
+          <div class="row g-4 align-items-center">
+            <div class="col-lg-8">
+              <div class="section-eyebrow mb-2">Contacto</div>
+              <h2 class="section-title mb-3">Busco un equipo donde aportar criterio técnico, autonomía y capacidad de entrega.</h2>
+              <p class="mb-0 text-muted-custom">
+                Interesado en posiciones relacionadas con <strong>backend Python</strong>, <strong>producto web</strong>,
+                <strong>automatización</strong>, <strong>integraciones</strong> y perfiles híbridos con visión técnica amplia.
+              </p>
+            </div>
+            <div class="col-lg-4">
+              <div class="d-grid gap-3">
+                <a class="btn btn-accent" href="mailto:iflorido@gmail.com">iflorido@gmail.com</a>
+                <a class="btn btn-ghost" href="https://www.linkedin.com/in/ignacio-florido/" target="_blank" rel="noopener">Ver LinkedIn</a>
+                <a class="btn btn-ghost" href="https://github.com/iflorido" target="_blank" rel="noopener">Ver GitHub</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="py-4">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-2">
+      <div>
+        <strong>Ignacio Florido</strong><br>
+        <small class="text-muted-custom">Desarrollador Backend Python y Product Builder</small>
+      </div>
+      <small class="text-muted-custom">Portfolio orientado a búsqueda activa de empleo y posicionamiento profesional.</small>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
