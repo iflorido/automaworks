@@ -40,10 +40,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['_form'])) {
   <meta name="author" content="Ignacio Florido">
   <meta name="theme-color" content="#0a0f1a">
   <link rel="canonical" href="https://cv.iflorido.es/">
-
+  <link rel="icon" href="/assets/favicon-32.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
   <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192.png">
-   <link rel="icon" href="/assets/favicon-32.ico">
 
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 
