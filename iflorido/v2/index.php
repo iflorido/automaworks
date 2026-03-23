@@ -176,7 +176,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['_form'])) {
       <aside class="hero__aside reveal" data-delay="2">
         <div class="stat-card">
           <div class="stat-card__label">Posicionamiento</div>
-          <h2 class="stat-card__title">Senior digital builder → especialización en backend Python e integración</h2>
+          <h2 class="stat-card__title">Desarrollador Senior → especialización en backend Python, Desarrollo Web e integración</h2>
           <p class="stat-card__desc">Experiencia senior en ejecución digital, desarrollo web, operación técnica, automatización y despliegue.</p>
           <div class="stat-card__grid">
             <div class="stat-block">
