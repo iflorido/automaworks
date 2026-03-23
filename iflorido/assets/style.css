@@ -127,7 +127,7 @@ h1,h2,h3,h4,h5,h6 {
   font-size: var(--h2);
   font-weight: 700;
   margin-bottom: .9rem;
-  max-width: 18ch;
+  max-width: 45ch;
 }
 .card-clean {
   background: var(--surface);
