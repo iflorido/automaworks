@@ -5,7 +5,7 @@
  *     'title'       => 'Título de la pestaña',
  *     'description' => 'Meta descripción',
  *     'path'        => '/soluciones/',
- *     'nav'         => 'soluciones' | 'proyectos' | 'contacto' | '',
+ *     'nav'         => 'inicio' | 'soluciones' | 'proyectos' | 'contacto' | '',
  *     'jsonld'      => '...' (opcional),
  *   ];
  */
@@ -68,6 +68,7 @@ $current = function ($slug) use ($nav) { return $slug === $nav ? ' aria-current=
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu">Menú</button>
 
     <nav class="nav" id="menu" aria-label="Principal">
+      <a href="/"<?= $current('inicio') ?>>Inicio</a>
       <a href="/soluciones/"<?= $current('soluciones') ?>>Soluciones</a>
       <a href="/proyectos/"<?= $current('proyectos') ?>>Proyectos</a>
       <a href="/#quien">Quién hay detrás</a>
