@@ -1,3 +1,9 @@
+### AutomaWorks ###
+# Credenciales SMTP: nunca al repositorio
+includes/config.php
+.DS_Store
+_legacy/
+
 ### AL ###
 #Template for AL projects for Dynamics 365 Business Central
 #launch.json folder
