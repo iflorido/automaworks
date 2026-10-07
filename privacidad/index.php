@@ -15,7 +15,7 @@ require __DIR__ . '/../includes/header.php';
   <article class="prose">
     <!-- REVISAR ANTES DE PUBLICAR: completa NIF y domicilio, y ajusta el apartado del asistente a lo que guarde realmente el contenedor. -->
     <h2>Responsable del tratamiento</h2>
-    <p>Ignacio Florido Pérez (AutomaWorks), NIF [COMPLETAR], con domicilio en [COMPLETAR], El Puerto de Santa María (Cádiz). Contacto: contacto@automaworks.es.</p>
+    <p>Ignacio Florido Pérez (AutomaWorks),, con domicilio en El Puerto de Santa María (Cádiz). Contacto: contacto@automaworks.es.</p>
 
     <h2>Formulario de contacto</h2>
     <ul>
