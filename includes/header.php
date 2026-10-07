@@ -14,7 +14,7 @@ $title = $page['title'] ?? 'AutomaWorks — Software a medida, integraciones e I
 $desc  = $page['description'] ?? '';
 $path  = $page['path'] ?? '/';
 $nav   = $page['nav'] ?? '';
-$asset_v = '1.1.0';
+$asset_v = '1.2.0';
 
 if (!function_exists('aw_e')) {
     function aw_e($s) { return htmlspecialchars((string) $s, ENT_QUOTES, 'UTF-8'); }
@@ -41,9 +41,9 @@ $current = function ($slug) use ($nav) { return $slug === $nav ? ' aria-current=
   <meta property="og:image" content="<?= aw_e($site) ?>/social-share.jpg">
   <meta name="twitter:card" content="summary_large_image">
 
-  <!-- Bunny Fonts: réplica europea de Google Fonts, sin registro de IP del visitante -->
+  <!-- Oxygen servida desde Bunny Fonts (réplica europea de Google Fonts, sin enviar la IP a Google) -->
   <link rel="preconnect" href="https://fonts.bunny.net">
-  <link rel="stylesheet" href="https://fonts.bunny.net/css?family=schibsted-grotesk:400,500,600&display=swap">
+  <link rel="stylesheet" href="https://fonts.bunny.net/css?family=oxygen:300,400,700&display=swap">
   <link rel="stylesheet" href="/assets/css/site.css?v=<?= $asset_v ?>">
 <?php if (!empty($page['jsonld'])): ?>
   <script type="application/ld+json"><?= $page['jsonld'] ?></script>

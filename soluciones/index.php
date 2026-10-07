@@ -38,6 +38,7 @@ require __DIR__ . '/../includes/header.php';
     <h1>Soluciones para que tu empresa funcione con menos fricción</h1>
     <p>Cada bloque empieza por una situación que probablemente reconozcas. Lo que viene después es cómo la resuelvo y con qué tecnología.</p>
     <ul class="page-index" aria-label="En esta página">
+      <li><a href="#consultoria">Consultoría</a></li>
       <li><a href="#software-a-medida">Software a medida</a></li>
       <li><a href="#integraciones">Integraciones</a></li>
       <li><a href="#automatizacion">Automatización</a></li>
@@ -50,9 +51,28 @@ require __DIR__ . '/../includes/header.php';
 
 <div class="wrap">
 
+  <section class="solution" id="consultoria" aria-labelledby="s0">
+    <div class="solution__aside">
+      <span class="solution__swatch" style="background:#2C3B4D"></span>
+      <h2 id="s0">Consultoría tecnológica</h2>
+    </div>
+    <div class="solution__body">
+      <p class="solution__lead">Sabes que hay que digitalizar algo, pero no por dónde empezar.</p>
+      <p>La transformación digital no empieza comprando un programa, sino entendiendo cómo funciona la empresa. Reviso vuestros procesos y herramientas, detecto dónde se pierde tiempo o dinero y te propongo un plan por fases con prioridades claras.</p>
+      <h3>Qué recibes</h3>
+      <ul class="ticks">
+        <li>Un diagnóstico de cómo circula hoy la información entre personas y herramientas.</li>
+        <li>Una hoja de ruta ordenada por impacto y coste: qué hacer primero y qué puede esperar.</li>
+        <li>Recomendaciones de herramientas existentes cuando no compensa desarrollar.</li>
+        <li>Una estimación realista de cada fase antes de comprometer presupuesto.</li>
+      </ul>
+      <p class="tech-line">Análisis de procesos, arquitectura de sistemas, selección de herramientas</p>
+    </div>
+  </section>
+
   <section class="solution" id="software-a-medida" aria-labelledby="s1">
     <div class="solution__aside">
-      <span class="solution__swatch" style="background:#FFB162"></span>
+      <span class="solution__swatch" style="background:#C9C1B1"></span>
       <h2 id="s1">Software a medida</h2>
     </div>
     <div class="solution__body">
@@ -71,7 +91,7 @@ require __DIR__ . '/../includes/header.php';
 
   <section class="solution" id="integraciones" aria-labelledby="s2">
     <div class="solution__aside">
-      <span class="solution__swatch" style="background:#C9C1B1"></span>
+      <span class="solution__swatch" style="background:#FFB162"></span>
       <h2 id="s2">Integraciones</h2>
     </div>
     <div class="solution__body">
@@ -109,7 +129,7 @@ require __DIR__ . '/../includes/header.php';
 
   <section class="solution" id="inteligencia-artificial" aria-labelledby="s4">
     <div class="solution__aside">
-      <span class="solution__swatch" style="background:#2C3B4D"></span>
+      <span class="solution__swatch" style="background:#1B2632"></span>
       <h2 id="s4">Inteligencia artificial</h2>
     </div>
     <div class="solution__body">
@@ -129,7 +149,7 @@ require __DIR__ . '/../includes/header.php';
 
   <section class="solution" id="dolibarr" aria-labelledby="s5">
     <div class="solution__aside">
-      <span class="solution__swatch" style="background:#1B2632"></span>
+      <span class="solution__swatch" style="outline:2px solid #1B2632;outline-offset:-2px"></span>
       <h2 id="s5">Dolibarr ERP</h2>
     </div>
     <div class="solution__body">

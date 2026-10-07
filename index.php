@@ -1,7 +1,7 @@
 <?php
 $page = [
-    'title'       => 'AutomaWorks — Software a medida, integraciones e IA para empresas',
-    'description' => 'Desarrollo de software a medida, integraciones entre ERP, CRM y tienda online, automatización de procesos y asistentes de IA para pymes. Trato directo con quien lo construye.',
+    'title'       => 'AutomaWorks — Soluciones tecnológicas y transformación digital para empresas',
+    'description' => 'Consultoría, software a medida, integraciones, automatización e inteligencia artificial para pymes. AutomaWorks analiza cómo trabaja tu empresa y construye la solución.',
     'path'        => '/',
     'nav'         => '',
     'assistant'   => true,
@@ -12,102 +12,87 @@ $page = [
         'url'         => 'https://automaworks.es/',
         'logo'        => 'https://automaworks.es/automaworks.png',
         'email'       => 'contacto@automaworks.es',
-        'description' => 'Software a medida, integraciones, automatización de procesos e inteligencia artificial para empresas.',
+        'description' => 'Consultoría tecnológica, software a medida, integraciones, automatización de procesos e inteligencia artificial para empresas.',
         'areaServed'  => 'ES',
         'address'     => ['@type' => 'PostalAddress', 'addressLocality' => 'El Puerto de Santa María', 'addressRegion' => 'Cádiz', 'addressCountry' => 'ES'],
         'founder'     => ['@type' => 'Person', 'name' => 'Ignacio Florido', 'url' => 'https://iflorido.es/'],
         'sameAs'      => ['https://www.linkedin.com/in/ignacio-florido/', 'https://github.com/iflorido'],
     ], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES),
 ];
+
+$projects = [
+    ['AppFincas', 'https://appfincas.com', 'appfincas', 'Gestión de comunidades de propietarios con cuentas claras, votaciones online y comunicación con cada vecino.', ['Django', 'PostgreSQL', 'HTMX']],
+    ['AutoRent', 'https://autorent.automaworks.es/', 'autorent', 'Alquiler de vehículos con reservas, contratos, pagos y posición GPS de la flota.', ['Django', 'Celery', 'React']],
+    ['NavControl', 'https://navcontrol.automaworks.es/', 'navcontrol', 'Localización de flotas, rutas y avisos en tiempo real, con app móvil para conductores.', ['Django', 'PostGIS', 'Flutter']],
+    ['El Precio de tu Casa', 'https://elpreciodetucasa.es/', 'elpreciodetucasa', 'Valoración automática de viviendas con datos públicos de Catastro, Ministerio e INE.', ['FastAPI', 'PostGIS', 'React']],
+    ['MapaElectroCarga', 'https://mapaelectrocarga.com', 'mapaelectrocarga', 'Más de 12.000 puntos de recarga para coches eléctricos en España, con conectores y potencia.', ['React', 'FastAPI']],
+    ['Dolibarr Tools', 'https://dolibarrtools.automaworks.es/', 'dolibarrtools', 'Módulos para Dolibarr ERP: sincronización con tiendas online, control horario y bolsas de horas.', ['PHP', 'Flask', 'Dolibarr']],
+];
+
 require __DIR__ . '/includes/header.php';
 ?>
 
 <section class="hero" aria-labelledby="hero-title">
   <div class="hero__grid">
     <div class="hero__head">
-      <h1 id="hero-title">Software que encaja en cómo trabaja tu empresa.</h1>
+      <h1 id="hero-title">Transformación digital a la medida de tu empresa.</h1>
     </div>
 
     <div class="hero__sub">
-      <p>AutomaWorks desarrolla aplicaciones, integraciones y asistentes de IA para empresas que han crecido más rápido que sus herramientas. Hablas directamente con quien diseña y construye la solución.</p>
+      <p>Analizo cómo trabajáis, conecto vuestras herramientas, automatizo lo que se repite y desarrollo el software que falta. Hablas directamente con quien diseña y construye la solución.</p>
       <div class="hero__actions">
         <a class="btn btn--ink" href="/contacto/">Cuéntame tu caso</a>
         <a class="btn btn--line" href="/soluciones/">Ver soluciones</a>
       </div>
     </div>
 
-    <div class="tile tile--sys tile--erp" aria-hidden="true">
-      <span class="tile__role">Stock, compras y facturación</span>
-      <span class="tile__name">ERP</span>
-    </div>
-    <div class="tile tile--sys tile--sheets" aria-hidden="true">
-      <span class="tile__role">Lo que alguien apunta a mano</span>
-      <span class="tile__name">Hojas de cálculo</span>
-    </div>
-    <div class="tile tile--sys tile--shop" aria-hidden="true">
-      <span class="tile__role">Pedidos que entran a cualquier hora</span>
-      <span class="tile__name">Tienda online</span>
-    </div>
-    <div class="tile tile--sys tile--invoices" aria-hidden="true">
-      <span class="tile__role">Lo que hay que emitir y cobrar</span>
-      <span class="tile__name">Facturación</span>
-    </div>
-    <div class="tile tile--sys tile--clients" aria-hidden="true">
-      <span class="tile__role">Quien te escribe cada día</span>
-      <span class="tile__name">Clientes y correo</span>
-    </div>
+    <a class="tile tile--consult" href="/soluciones/#consultoria">
+      <span class="tile__name">Consultoría tecnológica</span>
+      <span class="tile__desc">Revisamos tus procesos y decidimos qué digitalizar primero, y qué no.</span>
+    </a>
+    <a class="tile tile--software" href="/soluciones/#software-a-medida">
+      <span class="tile__name">Software a medida</span>
+      <span class="tile__desc">Aplicaciones construidas alrededor de tu forma de trabajar.</span>
+    </a>
+    <a class="tile tile--integr" href="/soluciones/#integraciones">
+      <span class="tile__name">Integraciones</span>
+      <span class="tile__desc">ERP, CRM y tienda online compartiendo datos sin copiar y pegar.</span>
+    </a>
+    <a class="tile tile--auto" href="/soluciones/#automatizacion">
+      <span class="tile__name">Automatización</span>
+      <span class="tile__desc">Informes, avisos y tareas repetitivas que se hacen solos.</span>
+    </a>
+    <a class="tile tile--ia" href="/soluciones/#inteligencia-artificial">
+      <span class="tile__name">Inteligencia artificial</span>
+      <span class="tile__desc">Asistentes que responden con la información de tu empresa.</span>
+    </a>
   </div>
 </section>
 
-<section class="section" aria-labelledby="situaciones">
+<section class="section" aria-labelledby="que-hace">
   <div class="wrap">
-    <div class="section__head">
-      <h2 id="situaciones">Casi siempre empieza por una de estas situaciones</h2>
-      <p>No hace falta saber qué tecnología necesitas. Basta con reconocer dónde se va el tiempo.</p>
-    </div>
-
-    <ul class="symptoms">
-      <li>
-        <p class="symptoms__quote">Los mismos datos se escriben en tres programas distintos.</p>
-        <p class="symptoms__answer">Conecto tus herramientas para que pedidos, clientes y facturas pasen de una a otra sin copiar y pegar.</p>
-        <a class="link" href="/soluciones/#integraciones">Integraciones</a>
-      </li>
-      <li>
-        <p class="symptoms__quote">El equipo se ha adaptado al programa, y no al revés.</p>
-        <p class="symptoms__answer">Desarrollo la herramienta que encaja con vuestro proceso real, no con el de un catálogo genérico.</p>
-        <a class="link" href="/soluciones/#software-a-medida">Software a medida</a>
-      </li>
-      <li>
-        <p class="symptoms__quote">Cada lunes alguien monta el mismo informe a mano.</p>
-        <p class="symptoms__answer">Automatizo informes, avisos y sincronizaciones para que ocurran solos y a tiempo.</p>
-        <a class="link" href="/soluciones/#automatizacion">Automatización</a>
-      </li>
-      <li>
-        <p class="symptoms__quote">La respuesta está en algún documento, pero nadie la encuentra.</p>
-        <p class="symptoms__answer">Asistentes de IA que consultan vuestra documentación y responden citando de dónde sale cada dato.</p>
-        <a class="link" href="/soluciones/#inteligencia-artificial">Inteligencia artificial</a>
-      </li>
-    </ul>
-  </div>
-</section>
-
-<section class="section section--dark on-dark" aria-labelledby="que-hace">
-  <div class="wrap">
-    <div class="section__head">
+    <div class="section__head section__head--split">
       <h2 id="que-hace">Qué hace AutomaWorks</h2>
-      <p>Cinco formas de resolver un mismo problema: que la tecnología de tu empresa trabaje para ti y no al revés.</p>
+      <p>Seis formas de resolver un mismo problema: que la tecnología de tu empresa trabaje para ti y no al revés.</p>
     </div>
 
     <ul class="offer">
       <li>
-        <h3 class="offer__name"><span class="offer__swatch" style="background:#FFB162"></span><a href="/soluciones/#software-a-medida">Software a medida</a></h3>
+        <h3 class="offer__name"><span class="offer__swatch" style="background:#2C3B4D"></span><a href="/soluciones/#consultoria">Consultoría tecnológica</a></h3>
+        <div class="offer__text">
+          <p>Análisis de procesos y herramientas para decidir qué conviene digitalizar, en qué orden y con qué coste.</p>
+          <p class="offer__tech">Diagnóstico, hoja de ruta, selección de herramientas</p>
+        </div>
+      </li>
+      <li>
+        <h3 class="offer__name"><span class="offer__swatch" style="background:#C9C1B1"></span><a href="/soluciones/#software-a-medida">Software a medida</a></h3>
         <div class="offer__text">
           <p>Aplicaciones de gestión, portales para clientes y plataformas SaaS construidas alrededor de cómo trabajáis.</p>
           <p class="offer__tech">Django, FastAPI, PostgreSQL, React</p>
         </div>
       </li>
       <li>
-        <h3 class="offer__name"><span class="offer__swatch" style="background:#C9C1B1"></span><a href="/soluciones/#integraciones">Integraciones</a></h3>
+        <h3 class="offer__name"><span class="offer__swatch" style="background:#FFB162"></span><a href="/soluciones/#integraciones">Integraciones</a></h3>
         <div class="offer__text">
           <p>ERP, CRM, tienda online, pasarelas de pago y servicios externos intercambiando datos sin intervención manual.</p>
           <p class="offer__tech">APIs REST, webhooks, colas de tareas</p>
@@ -121,14 +106,14 @@ require __DIR__ . '/includes/header.php';
         </div>
       </li>
       <li>
-        <h3 class="offer__name"><span class="offer__swatch" style="background:#EEE9DF"></span><a href="/soluciones/#inteligencia-artificial">Inteligencia artificial</a></h3>
+        <h3 class="offer__name"><span class="offer__swatch" style="background:#1B2632"></span><a href="/soluciones/#inteligencia-artificial">Inteligencia artificial</a></h3>
         <div class="offer__text">
           <p>Asistentes que responden con vuestra documentación, clasificación de correos y extracción de datos de documentos.</p>
           <p class="offer__tech">RAG, embeddings, modelos de OpenAI y Anthropic</p>
         </div>
       </li>
       <li>
-        <h3 class="offer__name"><span class="offer__swatch" style="background:#2C3B4D;outline:1px solid #C9C1B1"></span><a href="/soluciones/#dolibarr">Dolibarr ERP</a></h3>
+        <h3 class="offer__name"><span class="offer__swatch" style="background:transparent;outline:2px solid #1B2632;outline-offset:-2px"></span><a href="/soluciones/#dolibarr">Dolibarr ERP</a></h3>
         <div class="offer__text">
           <p>Implantación, módulos propios y sincronización con WooCommerce y PrestaShop, incluidos módulos con licencia comercial.</p>
           <p class="offer__tech">PHP, módulos Dolibarr, API REST</p>
@@ -140,65 +125,60 @@ require __DIR__ . '/includes/header.php';
   </div>
 </section>
 
-<section class="section" aria-labelledby="proyectos">
+<section class="section section--oat" aria-labelledby="proyectos">
   <div class="wrap">
-    <div class="section__head">
+    <div class="section__head section__head--split">
       <h2 id="proyectos">Proyectos en producción</h2>
       <p>Herramientas que se usan cada día. Puedes abrirlas y probarlas.</p>
     </div>
 
     <div class="work">
-      <a class="work__item" href="https://appfincas.com" rel="noopener">
-        <img class="work__img" src="/assets/proyectos/appfincas.jpg" alt="Panel de AppFincas con las cuentas de una comunidad de propietarios" loading="lazy" width="800" height="500">
-        <h3>AppFincas</h3>
-        <p>Gestión de comunidades de propietarios: cuentas claras, votaciones online y comunicación directa con cada vecino.</p>
-        <p class="work__tech">Django, PostgreSQL, HTMX</p>
+      <?php foreach ($projects as [$name, $url, $img, $text, $tech]): ?>
+      <a class="work__item" href="<?= aw_e($url) ?>" rel="noopener">
+        <div class="work__frame">
+          <img class="work__img" src="/assets/proyectos/<?= aw_e($img) ?>.jpg" alt="Captura de <?= aw_e($name) ?>" loading="lazy" width="800" height="500">
+        </div>
+        <h3 class="work__title"><?= aw_e($name) ?></h3>
+        <p><?= aw_e($text) ?></p>
+        <ul class="chips" aria-label="Tecnología"><?php foreach ($tech as $t): ?><li><?= aw_e($t) ?></li><?php endforeach; ?></ul>
       </a>
-      <a class="work__item" href="https://autorent.automaworks.es/" rel="noopener">
-        <img class="work__img" src="/assets/proyectos/autorent.jpg" alt="Plataforma AutoRent con el calendario de reservas de vehículos" loading="lazy" width="800" height="500">
-        <h3>AutoRent</h3>
-        <p>Alquiler de vehículos con reservas, contratos, pagos y posición GPS de la flota.</p>
-        <p class="work__tech">Django, Celery, PostgreSQL, React</p>
-      </a>
-      <a class="work__item" href="https://navcontrol.automaworks.es/" rel="noopener">
-        <img class="work__img" src="/assets/proyectos/navcontrol.jpg" alt="Mapa de NavControl con la ubicación de una flota en tiempo real" loading="lazy" width="800" height="500">
-        <h3>NavControl</h3>
-        <p>Localización de flotas, rutas y avisos en tiempo real, con aplicación móvil para conductores.</p>
-        <p class="work__tech">Django, PostGIS, Flutter</p>
-      </a>
-      <a class="work__item" href="https://elpreciodetucasa.es/" rel="noopener">
-        <img class="work__img" src="/assets/proyectos/elpreciodetucasa.jpg" alt="Valoración de una vivienda en El Precio de tu Casa" loading="lazy" width="800" height="500">
-        <h3>El Precio de tu Casa</h3>
-        <p>Valoración automática de viviendas con datos públicos de Catastro, Ministerio e INE, explicada paso a paso.</p>
-        <p class="work__tech">FastAPI, PostgreSQL con PostGIS, React</p>
-      </a>
+      <?php endforeach; ?>
     </div>
 
     <p class="section__foot"><a class="link" href="/proyectos/">Ver todos los proyectos</a></p>
   </div>
 </section>
 
-<section class="section section--oat" aria-labelledby="metodo">
+<section class="section section--dark on-dark" aria-labelledby="metodo">
   <div class="wrap">
-    <div class="section__head">
+    <div class="section__head section__head--split">
       <h2 id="metodo">Cómo trabajo</h2>
+      <p>Cuatro pasos, siempre en el mismo orden. Cada uno se apoya en el anterior, y no se avanza al siguiente sin que lo hayas validado.</p>
     </div>
     <ol class="steps">
       <li>
-        <h3>Entender</h3>
-        <p>Antes de proponer nada, veo cómo trabajáis hoy: quién hace qué, con qué herramientas y dónde se atasca.</p>
+        <div>
+          <h3>Entender</h3>
+          <p>Veo cómo trabajáis hoy: quién hace qué, con qué herramientas y dónde se atasca.</p>
+        </div>
       </li>
       <li>
-        <h3>Proponer</h3>
-        <p>Una solución concreta, con alcance, plazos y coste claros antes de empezar. A veces la respuesta es que no hace falta desarrollar nada.</p>
+        <div>
+          <h3>Proponer</h3>
+          <p>Una solución concreta, con alcance, plazos y coste claros. A veces la respuesta es que no hace falta desarrollar nada.</p>
+        </div>
       </li>
       <li>
-        <h3>Construir</h3>
-        <p>Por fases cortas que puedes probar. Ves la herramienta funcionando desde las primeras semanas.</p>
+        <div>
+          <h3>Construir</h3>
+          <p>Por fases cortas que puedes probar. Ves la herramienta funcionando desde las primeras semanas.</p>
+        </div>
       </li>
       <li>
-        <h3>Mantener</h3>
-        <p>Despliegue, copias de seguridad, monitorización y mejoras para que siga funcionando cuando cambie tu negocio.</p>
+        <div>
+          <h3>Mantener</h3>
+          <p>Despliegue, copias de seguridad, monitorización y mejoras para que siga funcionando cuando cambie tu negocio.</p>
+        </div>
       </li>
     </ol>
   </div>
@@ -206,7 +186,16 @@ require __DIR__ . '/includes/header.php';
 
 <section class="section" id="quien" aria-labelledby="quien-titulo">
   <div class="wrap person">
-    <img class="person__photo" src="/assets/img/ignacio-florido.jpg" alt="Ignacio Florido" loading="lazy" width="640" height="800">
+    <div class="person__brand" aria-hidden="true">
+      <svg class="person__mark" viewBox="0 0 20 20">
+        <rect x="0"  y="0"  width="12" height="9"  fill="#2C3B4D"/>
+        <rect x="12" y="0"  width="8"  height="13" fill="#A35139"/>
+        <rect x="0"  y="9"  width="12" height="11" fill="#FFB162"/>
+        <rect x="12" y="13" width="8"  height="7"  fill="#1B2632"/>
+      </svg>
+      <span class="person__wordmark">AutomaWorks</span>
+    </div>
+
     <div class="person__body">
       <h2 id="quien-titulo">Quién hay detrás</h2>
       <p>AutomaWorks es el estudio de desarrollo de Ignacio Florido, con más de veinte años en proyectos web y los últimos cinco especializado en backend con Python. Empezó con PHP y MySQL, pasó por la administración de servidores y hoy diseña, construye y despliega aplicaciones completas.</p>
@@ -216,9 +205,14 @@ require __DIR__ . '/includes/header.php';
         <dd>El Puerto de Santa María (Cádiz). En remoto para toda España.</dd>
         <dt>Formación</dt>
         <dd>Máster avanzado de programación en Python para hacking, big data y machine learning.</dd>
-        <dt>Perfil completo</dt>
-        <dd><a class="link" href="https://iflorido.es">iflorido.es</a></dd>
       </dl>
+      <div class="signature">
+        <img src="/assets/img/ignacio-florido.jpg" alt="" width="136" height="136" loading="lazy">
+        <div>
+          <strong>Ignacio Florido</strong>
+          <span>Fundador y desarrollador. Perfil completo en <a class="link" href="https://iflorido.es">iflorido.es</a></span>
+        </div>
+      </div>
     </div>
   </div>
 </section>

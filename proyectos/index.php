@@ -11,7 +11,7 @@ $apps = [
      'Django, PostGIS, Flutter'],
     ['El Precio de tu Casa', 'https://elpreciodetucasa.es/', 'elpreciodetucasa',
      'Valorador automático de viviendas construido solo con datos públicos: Catastro, valor tasado del Ministerio e INE.',
-     'FastAPI, PostgreSQL con PostGIS, React'],
+     'FastAPI, PostGIS, React'],
     ['MapaElectroCarga', 'https://mapaelectrocarga.com', 'mapaelectrocarga',
      'Mapa de más de 12.000 puntos de recarga para coches eléctricos en España, con conectores, potencia y operador.',
      'React, FastAPI, SQL'],
@@ -32,7 +32,7 @@ $apps = [
      'React, JavaScript'],
     ['Calculadora de préstamos', '/calculadora/', 'calculadora',
      'Simulador de hipotecas y préstamos con Euribor en tiempo real desde el BCE, TAE y cuadro de amortización.',
-     'HTML, CSS y JavaScript sin dependencias'],
+     'HTML, CSS, JavaScript'],
 ];
 
 $webs = [
@@ -68,13 +68,15 @@ require __DIR__ . '/../includes/header.php';
 
 <section class="section" aria-label="Aplicaciones">
   <div class="wrap">
-    <div class="work work--three">
+    <div class="work">
       <?php foreach ($apps as [$name, $url, $img, $text, $tech]): ?>
       <a class="work__item" href="<?= aw_e($url) ?>"<?= str_starts_with($url, 'http') ? ' rel="noopener"' : '' ?>>
-        <img class="work__img" src="/assets/proyectos/<?= aw_e($img) ?>.jpg" alt="Captura de <?= aw_e($name) ?>" loading="lazy" width="800" height="500">
+        <div class="work__frame">
+          <img class="work__img" src="/assets/proyectos/<?= aw_e($img) ?>.jpg" alt="Captura de <?= aw_e($name) ?>" loading="lazy" width="800" height="500">
+        </div>
         <h2 class="work__title"><?= aw_e($name) ?></h2>
         <p><?= aw_e($text) ?></p>
-        <p class="work__tech"><?= aw_e($tech) ?></p>
+        <ul class="chips" aria-label="Tecnología"><?php foreach (array_map('trim', explode(',', $tech)) as $t): ?><li><?= aw_e($t) ?></li><?php endforeach; ?></ul>
       </a>
       <?php endforeach; ?>
     </div>
