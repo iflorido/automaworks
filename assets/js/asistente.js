@@ -11,7 +11,7 @@
 (function () {
   "use strict";
 
-  const API_URL = "https://asistente.automaworks.es/chat";
+  const API_URL = "https://automachat.automaworks.es/chat";
   const root = document.getElementById("awa-root");
   if (!root) return;
 
