@@ -22,6 +22,7 @@ $page = [
 
 $projects = [
     ['AppFincas', 'https://appfincas.com', 'appfincas', 'Gestión de comunidades de propietarios con cuentas claras, votaciones online y comunicación con cada vecino.', ['Django', 'PostgreSQL', 'HTMX']],
+    ['SportServer', 'https://sport.automaworks.es', 'sportserver', 'Tienda online con un asistente de IA que busca productos, consulta pedidos y maneja la web mientras hablas con él.', ['Django', 'FastAPI', 'React']],
     ['AutoRent', 'https://autorent.automaworks.es/', 'autorent', 'Alquiler de vehículos con reservas, contratos, pagos y posición GPS de la flota.', ['Django', 'Celery', 'React']],
     ['NavControl', 'https://navcontrol.automaworks.es/', 'navcontrol', 'Localización de flotas, rutas y avisos en tiempo real, con app móvil para conductores.', ['Django', 'PostGIS', 'Flutter']],
     ['El Precio de tu Casa', 'https://elpreciodetucasa.es/', 'elpreciodetucasa', 'Valoración automática de viviendas con datos públicos de Catastro, Ministerio e INE.', ['FastAPI', 'PostGIS', 'React']],
