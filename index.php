@@ -21,6 +21,7 @@ $page = [
 ];
 
 $projects = [
+    ['EscapeBooking', 'https://escapebooking.es', 'escapebooking', 'Reservas online y gestión para escape rooms: calendario para cualquier web, cobro con Redsys, Bizum, Stripe y PayPal, salas compartidas entre juegos y bonos regalo.', ['Django', 'DRF' , 'PostgreSQL', 'React']],
     ['AppFincas', 'https://appfincas.com', 'appfincas', 'Gestión de comunidades de propietarios con cuentas claras, votaciones online y comunicación con cada vecino.', ['Django', 'PostgreSQL', 'HTMX']],
     ['SportServer', 'https://sport.automaworks.es', 'sportserver', 'Tienda online con un asistente de IA que busca productos, consulta pedidos y maneja la web mientras hablas con él.', ['Django', 'FastAPI', 'React']],
     ['AutoRent', 'https://autorent.automaworks.es/', 'autorent', 'Alquiler de vehículos con reservas, contratos, pagos y posición GPS de la flota.', ['Django', 'Celery', 'React']],
