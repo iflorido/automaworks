@@ -1,5 +1,8 @@
 <?php
 $apps = [
+    ['EscapeBooking', 'https://escapebooking.es', 'escapebooking',
+     'Reservas online y gestión para escape rooms: calendario para cualquier web, cobro con Redsys, Bizum, Stripe y PayPal, salas compartidas entre juegos y bonos regalo.',
+     'Django, DRF, React, PostgreSQL, Docker'],
     ['AppFincas', 'https://appfincas.com', 'appfincas',
      'Gestión de comunidades de propietarios con cuentas transparentes, remesas SEPA, votaciones online y comunicación directa con cada vecino.',
      'Django, PostgreSQL, HTMX, Docker'],
