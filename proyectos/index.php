@@ -1,4 +1,23 @@
 <?php
+/**
+ * Añade parámetros UTM a los enlaces externos para saber en Analytics que la visita viene de esta web.
+ * Los enlaces internos (/calculadora/) se dejan tal cual. Respeta los ?parámetros y el #ancla que ya tenga la URL.
+ */
+if (!function_exists('aw_utm')) {
+    function aw_utm(string $url, string $campaign = 'proyectos', string $source = 'automaworks'): string {
+        if (!str_starts_with($url, 'http')) {
+            return $url;
+        }
+        [$base, $hash] = array_pad(explode('#', $url, 2), 2, null);
+        $params = http_build_query([
+            'utm_source'   => $source,
+            'utm_medium'   => 'portfolio',
+            'utm_campaign' => $campaign,
+        ]);
+        return $base . (str_contains($base, '?') ? '&' : '?') . $params . ($hash !== null ? '#' . $hash : '');
+    }
+}
+
 $apps = [
     ['EscapeBooking', 'https://escapebooking.es', 'escapebooking',
      'Reservas online y gestión para escape rooms: calendario para cualquier web, cobro con Redsys, Bizum, Stripe y PayPal, salas compartidas entre juegos y bonos regalo.',
@@ -76,7 +95,7 @@ require __DIR__ . '/../includes/header.php';
   <div class="wrap">
     <div class="work">
       <?php foreach ($apps as [$name, $url, $img, $text, $tech]): ?>
-      <a class="work__item" href="<?= aw_e($url) ?>"<?= str_starts_with($url, 'http') ? ' rel="noopener"' : '' ?>>
+      <a class="work__item" href="<?= aw_e(aw_utm($url)) ?>"<?= str_starts_with($url, 'http') ? ' rel="noopener"' : '' ?>>
         <div class="work__frame">
           <img class="work__img" src="/assets/proyectos/<?= aw_e($img) ?>.jpg" alt="Captura de <?= aw_e($name) ?>" loading="lazy" width="800" height="500">
         </div>
@@ -97,7 +116,7 @@ require __DIR__ . '/../includes/header.php';
     </div>
     <ul class="plain-list">
       <?php foreach ($webs as [$name, $url, $text]): ?>
-      <li><a href="<?= aw_e($url) ?>" rel="noopener"><?= aw_e($name) ?></a><span><?= aw_e($text) ?></span></li>
+      <li><a href="<?= aw_e(aw_utm($url, 'webs')) ?>" rel="noopener"><?= aw_e($name) ?></a><span><?= aw_e($text) ?></span></li>
       <?php endforeach; ?>
     </ul>
   </div>
@@ -111,7 +130,7 @@ require __DIR__ . '/../includes/header.php';
     </div>
     <ul class="plain-list">
       <?php foreach ($lab as [$name, $url, $text]): ?>
-      <li><a href="<?= aw_e($url) ?>" rel="noopener"><?= aw_e($name) ?></a><span><?= aw_e($text) ?></span></li>
+      <li><a href="<?= aw_e(aw_utm($url, 'laboratorio')) ?>" rel="noopener"><?= aw_e($name) ?></a><span><?= aw_e($text) ?></span></li>
       <?php endforeach; ?>
     </ul>
   </div>
